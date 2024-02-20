@@ -30,6 +30,6 @@ func SetupRoute(db *gorm.DB) {
 		apiRoute.POST("/add", orderController.AddOrder)
 	}
 
-	httpRoute.Run(":8082")
+	httpRoute.Run(":8083")
 
 }

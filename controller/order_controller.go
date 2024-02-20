@@ -43,8 +43,10 @@ func (o orderController) AddOrder(ctx *gin.Context) {
 		return
 	}
 
+	log.Println(dataItem)
+
 	res := response.ResponsOrder{
-		OrderID: dataItem.ID,
+		OrderID: data.ID,
 		Msg:     "Pesanan Success, Mohon Segera Selasaikan Pembayaran",
 	}
 

@@ -1,6 +1,6 @@
 package response
 
 type ResponsOrder struct {
-	OrderID uint   `json:"no_pesanan"`
+	OrderID uint   `json:"order_id"`
 	Msg     string `json:"msg"`
 }
