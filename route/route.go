@@ -1,10 +1,12 @@
 package route
 
 import (
+	"fmt"
 	"log"
 	"order-service/controller"
 	"order-service/middleware"
 	"order-service/repository"
+	"os"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -30,6 +32,7 @@ func SetupRoute(db *gorm.DB) {
 		apiRoute.POST("/add", orderController.AddOrder)
 	}
 
-	httpRoute.Run(":8083")
+	// httpRoute.Run(":8083")
+	httpRoute.Run(fmt.Sprintf(":%s", os.Getenv("SERVER_PORT")))
 
 }
